@@ -1,0 +1,65 @@
+<modal id="modal"></modal>
+<!-- 用户信息 -->
+<view class="userInfo">
+	<view class="userInfo_data" wx:if="{{userInfo}}">
+		<image class="userInfo_data_bg" src="{{userInfo.avatarUrl}}" />
+		<view class="userInfo_data_content">
+			<view class="userInfo_data_img cu-avatar round" style="background-image:url({{userInfo.avatarUrl}});">
+			</view>
+			<text class="userInfo_data_username">{{userInfo.nickName}}</text>
+		</view>
+	</view>
+	<navigator
+	 url="/pages/login/login"
+	 open-type="navigate"
+	 class="userInfo_none"
+	 hover-class="none"
+	 wx:else
+	>
+		<view class="userInfo_none_content">
+			<image class="userInfo_none_img" src="https://fresh-supermarket.oss-cn-shenzhen.aliyuncs.com/logo.png" />
+			<text class="userInfo_none_txt">登录/注册</text>
+			<text class="userInfo_none_icon cuIcon-right"></text>
+		</view>
+	</navigator>
+</view>
+<!-- 我的订单 -->
+<view class="my_order">
+	<view class="my_order_header">我的订单</view>
+	<view class="my_order_list">
+		<navigator
+		 url="/pages/order/order?id={{item.id}}"
+		 open-type="navigate"
+		 hover-class="none"
+		 class="my_order_item"
+		 wx:for="{{orderList}}"
+		 wx:key="id"
+		>
+			<text class="my_order_item_icon {{item.icon}}"></text>
+			<text class="my_order_item_title">{{item.title}}</text>
+		</navigator>
+	</view>
+</view>
+<view class="my_about_list">
+	<navigator
+	 class="my_about_list_item"
+	 url="/pages/address/address"
+	 hover-class="none"
+	>
+		<view class="fl">收货地址管理</view>
+	</navigator>
+	<view class="my_about_list_item">
+		<button open-type="contact" hover-class="none">在线联系客服</button>
+	</view>
+	<view class="my_about_list_item">
+		<navigator url="/pages/feedback/feedback" hover-class="none">
+			意见反馈
+		</navigator>
+	</view>
+	<view class="my_about_list_item">
+		<view class="fl">客服电话</view>
+		<view class="fr">400-168-4000</view>
+	</view>
+	<view class="my_about_list_item" bindtap="handleAboutMe">关于我</view>
+</view>
+

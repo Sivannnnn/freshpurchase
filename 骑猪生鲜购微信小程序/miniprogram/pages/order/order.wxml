@@ -1,0 +1,111 @@
+<scroll-view scroll-x class="bg-white nav">
+	<view class="flex text-center">
+		<view
+		 class="cu-item flex-sub {{index==TabCur?'text-themeColor cur':''}}"
+		 wx:for="{{tabList}}"
+		 wx:key="id"
+		 bindtap="tabSelect"
+		 data-id="{{item.id}}"
+		>
+			{{item.title}}
+		</view>
+	</view>
+</scroll-view>
+<scroll-view scroll-y style="height:calc(100vh - 120rpx)">
+	<block wx:if="{{TabCur == 0}}">
+		<view wx:if="{{orderList}}">
+			<view
+			 class="item"
+			 wx:for="{{orderList}}"
+			 wx:key="index"
+			>
+				<view class="item_header clearfix">
+					<text class="item_header_time fl">{{item.deliveryTime}}</text>
+					<text class="item_header_info fr">商家正在备货</text>
+				</view>
+				<view class="item_body">
+					<view class="item_body_imgs">
+						<view
+						 class="item_body_imgs_item"
+						 wx:for="{{item.payOrder}}"
+						 wx:for-item="imgs"
+						 wx:key="idx"
+						>
+							<image src="{{imgs.src}}" />
+						</view>
+					</view>
+					<view class="item_body_txt clearfix">
+						<view class="fr">
+							<text class="item_body_txt_num">共{{item.totalNum}}件 </text>
+							<text class="item_body_txt_price">实付:￥{{item.totalNewPrice}}</text>
+						</view>
+					</view>
+					<view class="item_body_btn">
+						<view class="fr">
+							<text class="item_body_btn_del" bindtap="handleDeleteOrder" data-index="{{index}}">删除订单</text>
+							<text class="item_body_btn_repay" bindtap="handleRepayOrder" data-index="{{index}}">再次购买</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</block>
+	<block wx:if="{{TabCur == 1}}">
+		<view wx:if="{{null}}"></view>
+		<view class="none" wx:else>
+			<image class="none_img" src="https://fresh-supermarket.oss-cn-shenzhen.aliyuncs.com/order/%E6%9A%82%E6%97%A0%E8%AE%A2%E5%8D%95.png" />
+			<text class="none_txt">暂无待付款订单</text>
+		</view>
+	</block>
+	<block wx:if="{{TabCur == 2}}">
+		<view wx:if="{{orderList}}">
+			<view
+			 class="item"
+			 wx:for="{{orderList}}"
+			 wx:key="index"
+			>
+				<view class="item_header clearfix">
+					<text class="item_header_time fl">{{item.deliveryTime}}</text>
+					<text class="item_header_info fr">商家正在备货</text>
+				</view>
+				<view class="item_body">
+					<view class="item_body_imgs">
+						<view
+						 class="item_body_imgs_item"
+						 wx:for="{{item.payOrder}}"
+						 wx:for-item="imgs"
+						 wx:key="idx"
+						>
+							<image src="{{imgs.src}}" />
+						</view>
+					</view>
+					<view class="item_body_txt clearfix">
+						<view class="fr">
+							<text class="item_body_txt_num">共{{item.totalNum}}件 </text>
+							<text class="item_body_txt_price">实付:￥{{item.totalNewPrice}}</text>
+						</view>
+					</view>
+					<view class="item_body_btn">
+						<view class="fr">
+							<text class="item_body_btn_del" bindtap="handleDeleteOrder" data-index="{{index}}">删除订单</text>
+							<text class="item_body_btn_repay" bindtap="handleRepayOrder" data-index="{{index}}">再次购买</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="none" wx:else>
+			<image class="none_img" src="https://fresh-supermarket.oss-cn-shenzhen.aliyuncs.com/order/%E6%9A%82%E6%97%A0%E8%AE%A2%E5%8D%95.png" />
+			<text class="none_txt">暂无待收货订单</text>
+		</view>
+	</block>
+	<block wx:if="{{TabCur == 3}}">
+		<view wx:if="{{null}}"></view>
+		<view class="none" wx:else>
+			<image class="none_img" src="https://fresh-supermarket.oss-cn-shenzhen.aliyuncs.com/order/%E6%9A%82%E6%97%A0%E8%AE%A2%E5%8D%95.png" />
+			<text class="none_txt">暂无待评价订单</text>
+		</view>
+	</block>
+</scroll-view>
+<modal id="modal"></modal>
+

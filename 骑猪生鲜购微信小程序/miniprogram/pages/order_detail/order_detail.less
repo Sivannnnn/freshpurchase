@@ -1,0 +1,238 @@
+page {
+    background: linear-gradient(to bottom, var(--themeColor), #fff);
+}
+
+    .header {
+        padding: 20rpx;
+        color: #fff;
+        text-align: center;
+        height: 125rpx;
+
+        .title {
+            margin-top: 25rpx;
+            display: inline-block;
+            font-size: 54rpx;
+
+            .cuIcon-roundcheckfill {
+                margin-right: 10rpx;
+            }
+        }
+
+        .cuIcon-servicefill.fr {
+            color: #fff;
+            padding: 0;
+            width: 50rpx;
+            font-size: 44rpx;
+        }
+    }
+
+    .body {
+        overflow-y: scroll;
+    // 商品信息
+    .goods,
+    .delivery {
+        width: 90%;
+        background-color: #fff;
+        margin: 0 auto;
+        border-radius: 20rpx;
+        padding: 20rpx;
+        margin-top: 20rpx;
+    }
+
+    .goods {
+        .goods_info {
+            border-bottom: 2rpx solid #DCDCDC;
+            height: 300rpx;
+
+            .goods_info_item {
+                padding: 10rpx;
+                height: 120rpx;
+                display: flex;
+
+                .goods_info_item_img {
+                    flex: 1;
+                    height: 100%;
+                    margin-right: 10rpx;
+                    border-radius: 50%;
+                }
+
+                .goods_info_item_content {
+                    flex: 5;
+
+                    .goods_info_item_content_title {
+                        font-weight: bold;
+                        display: block;
+                    }
+
+                    .goods_info_item_content_quantity {
+                        flex: 1;
+                        color: #DCDCDC;
+                    }
+                }
+
+                .goods_info_item_price {
+                    .goods_info_item_price_new {
+                        font-size: 36rpx;
+                        display: block;
+                        font-weight: bold;
+                    }
+
+                    .goods_info_item_price_old {
+                        font-size: 32rpx;
+                        color: #DCDCDC;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+
+        .goods_total_price,
+        .goods_fare,
+        .goods_pay_price {
+            padding: 20rpx 0;
+        }
+
+        .goods_total_price_title,
+        .goods_fare_title {
+            font-size: 32rpx;
+        }
+
+        .goods_total_price_new,
+        .goods_fare_num,
+        .goods_pay_price_num {
+            font-weight: bold;
+        }
+
+        .goods_total_price {
+            .goods_total_price_title {}
+
+            .goods_total_price_old {
+                font-size: 32rpx;
+                color: #DCDCDC;
+                text-decoration: line-through;
+            }
+
+            .goods_total_price_new {}
+        }
+
+        .goods_fare {
+            border-bottom: 2rpx solid #DCDCDC;
+
+            .goods_fare_title {}
+
+            .goods_fare_num {}
+        }
+
+        .goods_pay_price {
+            font-size: 38rpx;
+
+            .goods_pay_price_title {}
+
+            .goods_pay_price_num {}
+        }
+    }
+
+    // 配送信息
+    .delivery {
+        .delivery_header {
+            padding: 20rpx 0;
+            border-bottom: 2rpx solid #DCDCDC;
+
+            text {
+                font-size: 40rpx;
+                font-weight: bold;
+            }
+        }
+
+        .delivery_body {
+            font-size: 32rpx;
+
+            .delivery_body_address,
+            .delivery_body_time,
+            .delivery_body_lack,
+            .delivery_body_remarks {
+                margin: 15rpx;
+                display: flex;
+            }
+
+            .delivery_body_address_title,
+            .delivery_body_time_title,
+            .delivery_body_lack_title,
+            .delivery_body_remarks_title {
+                flex: 3;
+                color: #DCDCDC;
+                font-size: 32rpx;
+                margin-right: 15rpx;
+            }
+
+            .delivery_body_address_content,
+            .delivery_body_time_content,
+            .delivery_body_lack_content,
+            .delivery_body_remarks_content  {
+                flex: 8;
+            }
+
+            .delivery_body_address {
+                .delivery_body_address_title {}
+
+                .delivery_body_address_content {
+                    .delivery_body_address_content_txt {
+                        display: block;
+                    }
+                }
+            }
+
+            .delivery_body_time {
+                .delivery_body_time_title {}
+
+                .delivery_body_time_content {
+                    text {}
+                }
+            }
+
+            .delivery_body_lack {
+                .delivery_body_lack_title {}
+
+                .delivery_body_lack_content {
+                    text {}
+                }
+            }
+            .delivery_body_remarks {
+                .delivery_body_remarks_title {
+              
+                }
+              
+                .delivery_body_remarks_content {
+                   
+                }
+              }
+        }
+    }
+
+}
+
+// 底部操作栏
+.bottom {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 170rpx;
+    background: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    .btn {
+        margin: 0 35rpx;
+        height: 65rpx;
+        font-size: 32rpx;
+        padding: 10rpx;
+        border-radius: 20rpx;
+        border: 2rpx solid #DCDCDC;
+    }
+
+    .repay {
+        color: var(--themeColor);
+        border: 2rpx solid var(--themeColor);
+    }
+}

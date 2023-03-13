@@ -1,0 +1,45 @@
+.group {
+  padding: 40rpx 40rpx;
+  font-size: 36rpx;
+}
+.group .group_top {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 100rpx;
+}
+.group .group_top .title {
+  width: 150rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.group .group_top input {
+  height: 50rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 2rpx solid #DCDCDC;
+}
+.group .group_top text.cuIcon-locationfill.text-themeColor {
+  float: right;
+  flex: 1;
+}
+.group .grop_bottom {
+  margin-left: 160rpx;
+  height: 100rpx;
+  border-bottom: 2rpx solid #DCDCDC;
+}
+.btn {
+  margin: 0 auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 36rpx;
+  border-radius: 50rpx;
+  width: 90%;
+  color: #fff;
+  background-color: var(--themeColor);
+}
+.del {
+  text-align: center;
+  margin: 20rpx auto;
+  text-decoration: underline;
+  font-size: 36rpx;
+}

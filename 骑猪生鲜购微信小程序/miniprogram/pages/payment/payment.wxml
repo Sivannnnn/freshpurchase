@@ -1,0 +1,119 @@
+<modal id="modal"></modal>
+<aboutModal id="aboutModal"></aboutModal>
+<loadingModal id="loadingModal"></loadingModal>
+<view class="body" style="height:calc(100vh - 170rpx)">
+	<!-- 收获地址 -->
+	<navigator
+	 class="address clearfix"
+	 url="/pages/address/address?isChoice=1"
+	 hover-class="none"
+	>
+		<text class="address_icon cuIcon-location"></text>
+		<text class="address_right cuIcon-right"></text>
+		<text class="address_txt" wx:if="{{address.length==0}}">请选择收获地址</text>
+		<view class="address_detail" wx:else>
+			<text class="address_detail_tit text-overflow">{{address.appro_address}}{{address.detail_address}}</text>
+			<text class="address_detail_info text-overflow">{{address.receiver}}{{address.sex}} {{address.tel_number}}</text>
+		</view>
+	</navigator>
+	<!-- 送达时间 -->
+	<view class="delivery_time clearfix">
+		<text class="address_right cuIcon-right fr"></text>
+		<text class="delivery_time_tit">送达时间</text>
+		<view class="delivery_time_txt">
+			<picker
+			 bindchange="handleChangeDeliveryTime"
+			 value="{{index}}"
+			 range="{{deliveryTimeArray}}"
+			>
+				<view class="picker">
+					{{deliveryTime}}
+				</view>
+			</picker>
+		</view>
+	</view>
+	<!-- 商品信息 -->
+	<view class="goods clearfix">
+		<view class="goods_header clearfix">
+			<text class="goods_header_left">商品信息</text>
+			<text class="goods_header_right">共{{totalNum}}件</text>
+		</view>
+		<view class="goods_imgs">
+			<view
+			 class="goods_img_items"
+			 wx:for="{{payOrder}}"
+			 wx:key="id"
+			>
+				<image src="{{item.src}}"></image>
+			</view>
+		</view>
+		<view class="goods_total_price clearfix">
+			<text class="goods_total_price_tit">商品金额</text>
+			<text class="goods_total_price_num">￥{{totalNewPrice}}</text>
+		</view>
+		<view class="goods_fare">
+			<text class="goods_fare_tit">配送费</text>
+			<text class="goods_fare_num">￥0.00</text>
+		</view>
+		<view class="goods_footer clearfix">
+			<text class="goods_footer_num">￥{{totalNewPrice}}</text>
+			<text class="goods_footer_txt">小计:</text>
+		</view>
+	</view>
+	<!-- 支付方式 -->
+	<view class="paystyle">
+		<view class="paystyle_header">
+			<text>支付方式</text>
+		</view>
+		<view class="paystyle_content clearfix">
+			<text class="paystyle_content_icon iconfont icon-weixinzhifu"></text>
+			<text class="paystyle_content_tit">微信支付</text>
+			<checkbox
+			 class="paystyle_content_checkbox"
+			 checked="{{isUseWechatPayment}}"
+			 bindtap="handleChangePayStyle"
+			>
+			</checkbox>
+		</view>
+	</view>
+	<!-- 备注 -->
+	<view class="remarks">
+		<view class="remarks_header clearfix">
+			<text class="remarks_header_tit">备注</text>
+			<text class="remarks_header_counts">{{remarks.length}}/100字</text>
+		</view>
+		<view class="view remarks_content">
+			<input
+			 type="text"
+			 placeholder="输入备注信息"
+			 value="{{remarks}}"
+			 bindinput="writeRemarks"
+			/>
+		</view>
+	</view>
+	<!-- 相关设置 -->
+	<view class="about_setting">
+		<view
+		 class="about_setting_info"
+		 wx:for="{{aboutSetting}}"
+		 wx:key="id"
+		>
+			<view class="about_setting_info_left">
+				<text class="about_setting_info_left_tit">{{item.title}}</text>
+				<text class="about_setting_info_left_icon cuIcon-question" bindtap="showModal"
+					data-info="{{item.info}}"></text>
+				<text class="about_setting_info_left_description">{{item.description}}</text>
+			</view>
+			<view class="about_setting_info_right">
+				<checkbox checked="{{item.isChecked}}"></checkbox>
+			</view>
+		</view>
+	</view>
+</view>
+<!-- 底部操作栏 -->
+<view class="bottom clearfix">
+	<text>应付:</text>
+	<text class="bottom_num">￥{{totalNewPrice}}</text>
+	<button bindtap="handlePay">去支付</button>
+</view>
+

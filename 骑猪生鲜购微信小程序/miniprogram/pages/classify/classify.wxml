@@ -1,0 +1,93 @@
+<swiper
+ class="screen-swiper round-dot"
+ indicator-dots="true"
+ circular="true"
+ autoplay="true"
+ interval="5000"
+ duration="500"
+>
+	<swiper-item wx:for="{{bannerList}}" wx:key="id">
+		<image src="{{item.src}}" mode='aspectFill' />
+	</swiper-item>
+</swiper>
+<view class="VerticalBox">
+	<scroll-view
+	 class="VerticalNav nav"
+	 scroll-y
+	 scroll-with-animation
+	 style="height:calc(100vh - 375rpx)"
+	>
+		<view
+		 class="cu-item {{index==TabCur?'text-themeColor':''}}"
+		 wx:for="{{classifyName}}"
+		 wx:key="id"
+		 bindtap='tabSelect'
+		 data-id="{{index}}"
+		>
+			{{item.title}}
+		</view>
+	</scroll-view>
+	<scroll-view
+	 class="VerticalMain"
+	 scroll-y
+	 scroll-top="{{viewTop}}"
+	 style="height:calc(100vh - 375rpx)"
+	 bindscroll="VerticalMain"
+	>
+		<view class="padding-top padding-lr" id="the-id">
+			<view
+			 class="searchNxt"
+			 hidden="{{TabCur === 0 ? true : false}}"
+			 bindtap="scrollTop"
+			 data-id="{{TabCur}}"
+			 data-name="{{name}}"
+			>
+				<text class="iconfont icon-shangla"></text>
+				<text class="searchNxt_txt">点击查看上一分类</text>
+			</view>
+			<view class='cu-bar solid-bottom bg-white'>
+				<view class='action  bg-white'>
+					<text class='cuIcon-title text-themeColor'></text>
+					{{name}}
+				</view>
+			</view>
+			<view class="cu-list menu-avatar">
+				<view
+				 class="cu-item item clearfix"
+				 wx:for="{{classifyList.list}}"
+				 wx:key="id"
+				>
+					<navigator url="/pages/goods_detail/goods_detail?value={{item.id}}" hover-class="none">
+						<image
+						 class="item_img"
+						 src="{{item.src}}"
+						 lazy-load
+						/>
+						<view class="item_content">
+							<view class="item_content_top">
+								<text class="item_tit text-overflow">{{item.title}}</text>
+							</view>
+							<view class="item_content_bottom">
+								<text class="item_newPrice">￥{{item.newPrice}}</text>
+								<text class="item_oldPrice">￥{{item.oldPrice}}</text>
+								<text class="item_sales">月售:{{item.sales}}</text>
+							</view>
+						</view>
+					</navigator>
+					<text class="item_add cuIcon-add" bindtap="add" data-item="{{item}}"></text>
+				</view>
+			</view>
+			<view
+			 class="searchNxt"
+			 hidden="{{TabCur >= classifyName.length-1 ? true : false}}"
+			 bindtap="scrollButton"
+			 data-id="{{TabCur}}"
+			 data-name="{{name}}"
+			>
+				<text class="iconfont icon-shangla1"></text>
+				<text class="searchNxt_txt">点击查看下一分类</text>
+			</view>
+		</view>
+	</scroll-view>
+</view>
+

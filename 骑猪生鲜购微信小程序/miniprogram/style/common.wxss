@@ -1,0 +1,44 @@
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both
+}
+
+.text-themeColor {
+    color: var(--themeColor);
+}
+
+.bg-themeColor {
+    background-color: var(--themeColor);
+}
+
+/* 复选框样式 */
+checkbox .wx-checkbox-input {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    border-color: var(--themeColor);
+}
+
+/* 复选框选中样式 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background: var(--themeColor) !important;
+    border-color: var(--themeColor) !important;
+}
+
+/* 复选框选中之后对号的样式 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+    background-color: var(--themeColor);
+    color: #fff;
+}
+
+/* 字体超出两行显示省略号 */
+.text-overflow {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden; /* 溢出内容隐藏 */
+    text-overflow: ellipsis; /* 文本溢出部分用省略号表示 */
+    display: -webkit-box; /* 特别显示模式 */
+    -webkit-line-clamp: 2; /* 行数 */
+    line-clamp: 2;
+    -webkit-box-orient: vertical; /* 盒子中内容竖直排列 */
+}

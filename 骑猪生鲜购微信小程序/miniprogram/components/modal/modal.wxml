@@ -1,0 +1,14 @@
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+	<view class="cu-dialog">
+		<view class="cu-bar bg-white justify-end">
+			<view class="content">骑猪温馨提示</view>
+			<view class="action" bindtap="hideModal">
+				<text class="iconfont icon-quxiao text-black"></text>
+			</view>
+		</view>
+		<view class="padding-xl">
+			{{modalInfo}}
+		</view>
+	</view>
+</view>
+

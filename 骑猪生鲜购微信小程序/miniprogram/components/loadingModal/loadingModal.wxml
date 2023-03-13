@@ -1,0 +1,9 @@
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+	<image
+	 src='https://fresh-supermarket.oss-cn-shenzhen.aliyuncs.com/logo.png'
+	 class='png'
+	 mode='aspectFit'
+	></image>
+	<view class='gray-text'>{{loadingModalInfo}}</view>
+</view>
+

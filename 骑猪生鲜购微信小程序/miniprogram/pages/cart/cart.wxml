@@ -1,0 +1,107 @@
+<modal id="modal"></modal>
+<!-- 头部 -->
+<view class="header clearfix">
+	<view class="header_info">
+		<image wx:if="{{userInfo}}" src="{{userInfo.avatarUrl}}" />
+		<navigator
+		 url="/pages/login/login"
+		 hover-class="none"
+		 wx:else
+		>请登录/注册
+		</navigator>
+	</view>
+	<view class="header_clear" bindtap="handleClearCarts">
+		<text>清空</text>
+		<text class="cuIcon-deletefill"></text>
+	</view>
+</view>
+<!-- 购物车信息列表 -->
+<view class="cart" style="height:calc(100vh - 220rpx)">
+	<view class="cart_list" wx:if="{{cartList.length!==0}}">
+		<view
+		 class="cart_list_item"
+		 wx:for="{{cartList}}"
+		 wx:key="id"
+		 bindlongpress="handleLongPressDelGood"
+		 data-id="{{index}}"
+		>
+			<checkbox
+			 class="item_select"
+			 checked="{{item.checked}}"
+			 bindtap="handleCheckedOne"
+			 data-id="{{index}}"
+			>
+			</checkbox>
+			<navigator
+			 class="item_content"
+			 url="/pages/goods_detail/goods_detail?value={{item.id}}"
+			 hover-class="none"
+			>
+				<image class="content_img" src="{{item.src}}" />
+				<view class="content_txt">
+					<text class="content_txt_name">{{item.title}}</text>
+					<text class="content_txt_price">￥{{item.newPrice}}</text>
+				</view>
+			</navigator>
+			<view class="item_quantity">
+				<view
+				 class="item_quantity_add"
+				 bindtap="handleEditNum"
+				 data-id="{{index}}"
+				 data-type="1"
+				>+
+				</view>
+				<text class="item_quantity_txt">{{item.num}}</text>
+				<view
+				 class="item_quantity_min"
+				 bindtap="handleEditNum"
+				 data-id="{{index}}"
+				 data-type="-1"
+				>-
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="cart_none" wx:else>
+		<image class="cart_none_img" src="https://fresh-supermarket.oss-cn-shenzhen.aliyuncs.com/cart/%E8%B4%AD%E7%89%A9%E8%BD%A6%E7%A9%BA%E7%A9%BA%E5%A6%82%E4%B9%9F.png">
+		</image>
+		<text class="cart_none_txt">
+			您的购物车空着呢~快去逛逛吧
+		</text>
+		<navigator
+		 url="/pages/index/index"
+		 open-type="switchTab"
+		 hover-class="none"
+		 class="cart_none_btn"
+		>
+			去逛逛
+		</navigator>
+	</view>
+</view>
+<!-- 底部操作栏 -->
+<view class="total_bar clearfix" wx:if="{{cartList.length!==0}}">
+	<view class="total_bar_left">
+		<checkbox
+		 class="total_bar_select_all"
+		 checked="{{allChecked}}"
+		 bindtap="checkAll"
+		></checkbox>
+		<text>全选</text>
+	</view>
+	<view class="total_bar_center">
+		<view class="total_bar_center_total">
+			合计:
+			<text class="total_bar_center_total_num">{{totalNewPrice}}</text>
+			元
+		</view>
+		<view class="total_bar_center_txt">包运费</view>
+	</view>
+	<view
+	 class="total_bar_right"
+	 bindtap="handlePay"
+	 hover-class="none"
+	>
+		结算
+	</view>
+</view>
+

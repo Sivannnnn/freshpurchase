@@ -1,0 +1,17 @@
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+	<view class="cu-dialog">
+		<view class="cu-bar bg-white justify-end">
+			<view class="content">{{modalInfo.title}}</view>
+			<view class="action" bindtap="hideModal">
+				<text class="iconfont icon-quxiao text-black"></text>
+			</view>
+		</view>
+		<view class="padding-xl body">
+			<text class="body_title">{{modalInfo.introduce.title}}</text>
+			<text class="body_description">{{modalInfo.introduce.description}}</text>
+			<text class="body_title">{{modalInfo.other.title}}</text>
+			<text class="body_description">{{modalInfo.other.description}}</text>
+		</view>
+	</view>
+</view>
+

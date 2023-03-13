@@ -1,0 +1,16 @@
+@import "../../style/iconfont/iconfont.wxss";
+@import "../../style/colorUi/main.wxss";
+.cu-bar .content {
+
+}
+.body{
+    text-align: left;
+}  
+.body .body_title {
+    display: block;
+    font-weight: bold;
+}
+  
+.body .body_description {
+    
+}

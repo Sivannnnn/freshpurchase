@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+    "loadingModal":"../../components/loadingModal/loadingModal"
+    },
+    "navigationBarTitleText": "登录"
+}

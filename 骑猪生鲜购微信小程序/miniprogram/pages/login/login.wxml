@@ -1,0 +1,20 @@
+<loadingModal id="loadingModal"></loadingModal>
+<view class="login">
+	<image class="logo" src="https://fresh-supermarket.oss-cn-shenzhen.aliyuncs.com/logo.png" />
+	<button class="btn" bindtap="login">
+		登录/注册
+	</button>
+	<view class="userProtocol clearfix">
+		<checkbox
+		 class="userProtocol_checkbox"
+		 checked="{{isChecked}}"
+		 bindtap="checked"
+		></checkbox>
+		<view class="userProtocol_txt">
+			已阅读并同意
+			<text class="userProtocol_txt_highline">骑猪生鲜购服务协议、骑猪生鲜购隐私政策、骑猪生鲜购用户注册协议、骑猪生鲜购隐私政策、敏感个人信息处理授权协议、个人信息共享授权协议</text>
+			。若您的账号未注册，将为您直接注册骑猪生鲜购账号
+		</view>
+	</view>
+</view>
+

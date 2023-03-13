@@ -1,0 +1,89 @@
+<modal id="modal"></modal>
+<!-- 轮播图 -->
+<view class="detail_swiper">
+	<swiper
+	 autoplay
+	 circular
+	 indicator-dots
+	>
+		<swiper-item
+		 wx:for="{{swiper_list}}"
+		 wx:key="id"
+		 bindtap="handlePreviewImage"
+		 data-index="{{index}}"
+		 data-urls="{{item.src}}"
+		>
+			<image mode="heightFix" src="{{item.src}}" />
+		</swiper-item>
+	</swiper>
+</view>
+<view class="body" style="height:calc(100vh - 450rpx)">
+	<view class="content">
+		<text class="content_newPrice">￥{{goods_Info[0].newPrice}}/件</text>
+		<text class="content_oldPrice">￥{{goods_Info[0].oldPrice}}</text>
+		<text class="content_title">{{goods_Info[0].title}}</text>
+		<text class="content_desc">肉质细嫩鲜美(新老包装随机发货)</text>
+	</view>
+	<view class="remark">
+		<view class="remark_top clearfix">
+			<text class="remark_top_title">用户评价</text>
+			<view class="remark_top_allRemarks">
+				全部评价
+				<text class="cuIcon-right"></text>
+			</view>
+		</view>
+		<view class="remark_center clearfix">
+			<view class="remark_center_score">
+				<text class="remark_center_score_num">100%</text>
+				<text class="remark_center_score_txt">好评率</text>
+			</view>
+			<view class="remark_center_label">
+				<view class="remark_center_label_item">性价比高 59</view>
+				<view class="remark_center_label_item">物美价廉 82</view>
+				<view class="remark_center_label_item">完好无损 20</view>
+				<view class="remark_center_label_item">使用方便 77</view>
+			</view>
+		</view>
+		<view class="remark_footer">
+			<view class="remark_footer_userInfo clearfix">
+				<image class="remark_footer_userInfo_img" src="https://fresh-supermarket.oss-cn-shenzhen.aliyuncs.com/logo.png"></image>
+				<view class="remark_footer_userInfo_content">
+					<text class="remark_footer_userInfo_username">Sivan</text>
+					<text class="remark_footer_userInfo_remakrDate">2022.11.01</text>
+				</view>
+			</view>
+			<view class="remark_footer_remarkInfo">
+				正宗可靠，数量/份量充足，性价比高，品质保障，我一定会推荐给我朋友，肥水不流外人田，冲啦！
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="cu-bar bg-white tabbar border shop">
+	<button
+	 class="action"
+	 open-type="contact"
+	 hover-class="none"
+	>
+		<view class="cuIcon-service text-themeColor ">
+		</view>
+		客服
+	</button>
+	<navigator
+	 class="action"
+	 url="/pages/cart/cart"
+	 open-type="switchTab"
+	 hover-class="none"
+	>
+		<view class="cuIcon-cart">
+			<view class="cu-tag badge">{{cartsNumber}}</view>
+		</view>
+		购物车
+	</navigator>
+	<view class="btn-group">
+		<button class="cu-btn bg-themeColor text-white round shadow-blur" bindtap="add">加入购物车
+		</button>
+		<button class="cu-btn bg-themeColor text-white round shadow-blur" bindtap="handleBuyNow">立即抢购</button>
+	</view>
+</view>
+

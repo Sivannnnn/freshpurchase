@@ -1,0 +1,94 @@
+<view wx:if="{{advertising}}">
+	<button
+	 class="cu-btn round bg-blue adv_btn"
+	 bindtap="jmp"
+	 style=""
+	>跳过广告{{time}}
+	</button>
+	<image src="https://fresh-supermarket.oss-cn-shenzhen.aliyuncs.com/index/adv.jpg?versionId=CAEQBxiBgID6qJfNoBgiIDkwZGU2ZTZmNjJiMjQyZGNiYjY1MmU4NDI3YjJhM2Yw" style="width: 100%;height:100vh;position:fixed" />
+</view>
+<view class="body" wx:else>
+	<!--页面内容-->
+	<!-- 搜索栏 -->
+	<searchInput hotWords="{{hotWords}}"></searchInput>
+	<!-- 横幅广告————跑马灯 -->
+	<view class="marquee">
+		<text class="marquee_icon iconfont icon-tongzhi"></text>
+		<view class="marquee_content">
+			<view id="noticeItem" class="notice_item_style">
+				{{message}}
+			</view>
+		</view>
+	</view>
+	<!-- 种类 -->
+	<view class="cate">
+		<view
+		 class="cate_item"
+		 wx:for="{{catesList}}"
+		 wx:key="id"
+		 bindtap="toClassify"
+		 data-id="{{item.classifyId}}"
+		>
+			<image class="cate_item_img" src="{{item.src}}"></image>
+			<view class="cate_item_title">{{item.title}}</view>
+		</view>
+	</view>
+	<!-- 限时秒杀 -->
+	<view class="limit">
+		<view class="limit_header">
+			<text class="limit_header_title">限时秒杀</text>
+			<view class="limit_header_timer">
+				<view class="limit_header_timer_bg">{{hour1}}{{hour2}}</view>
+				:
+				<view class="limit_header_timer_bg">{{minutes1}}{{minutes2}}</view>
+				:
+				<view class="limit_header_timer_bg">{{second1}}{{second2}}</view>
+			</view>
+		</view>
+		<view class="limit_list">
+			<navigator
+			 url="/pages/goods_detail/goods_detail?value={{item.id}}"
+			 hover-class="none"
+			 class="limit_list_item"
+			 wx:for="{{timeLimitList}}"
+			 wx:key="id"
+			>
+				<image class="limit_list_item_img" src="{{item.src}}" />
+				<text class="limit_list_item_tit">{{item.title}}</text>
+				<text class="limit_list_item_old">￥{{item.oldPrice}}</text>
+				<text class="limit_list_item_new">￥{{item.newPrice}}</text>
+			</navigator>
+		</view>
+	</view>
+	<!-- 广告1 -->
+	<navigator
+	 class="adv1"
+	 url="/pages/goods_list/goods_list?value=饮料酒水"
+	 hover-class="none"
+	>
+		<image src="https://fresh-supermarket.oss-cn-shenzhen.aliyuncs.com/index/adv1.gif?versionId=CAEQBxiBgMD0qangoBgiIDY4ZTExN2ZhMmRjYjRkMDU5YzgxMGIyODlmNWMyODM5" />
+	</navigator>
+	<!-- 导航1 -->
+	<view class="nav1">
+		<view
+		 class="nav1_item"
+		 wx:for="{{nav1}}"
+		 wx:key="id"
+		>
+			<navigator url="/pages/goods_detail/goods_detail?value={{item.id}}" hover-class="none">
+				<image
+				 class="nav1_item_img"
+				 src="{{item.src}}"
+				 lazy-load
+				/>
+				<view class="nav1_item_content">
+					<text class="nav1_item_tit text-overflow">{{item.title}}</text>
+					<text class="nav1_item_price">￥{{item.newPrice}}</text>
+					<text class="nav1_item_sales">月售:{{item.sales}}</text>
+				</view>
+			</navigator>
+			<text class="nav1_item_add cuIcon-add" bindtap="add" data-item="{{item}}"></text>
+		</view>
+	</view>
+</view>
+

@@ -1,0 +1,131 @@
+// 用户信息
+.userInfo {
+    position: relative;
+    .userInfo_data {
+        height: 300rpx;
+        position: relative;
+
+        .userInfo_data_bg {
+            // 高斯模糊
+            filter: blur(5px);
+            height: 300rpx;
+            width: 100%;
+            position: absolute;
+        }
+
+        .userInfo_data_content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .userInfo_data_img {
+                width: 150rpx;
+                height: 150rpx;
+            }
+
+            .userInfo_data_username {
+                color: #fff;
+                font-size: 48rpx;
+                text-align: center;
+                z-index: 1;
+            }
+        }
+    }
+
+    .userInfo_none {
+        position: absolute;
+        background-color: var(--themeColor);
+        color: #fff;
+        height: 200rpx;
+        position: relative;
+
+        .userInfo_none_content {
+            position: absolute;
+            left: 5%;
+            top: 25%;
+            height: 100rpx;
+            font-size: 32rpx;
+            .userInfo_none_img {
+                background-color: #fff;
+                border-radius: 50%;
+                width: 100rpx;
+                height: 100rpx;
+                float: left;
+            }
+
+            .userInfo_none_txt {
+                margin: 0 20rpx;
+            }
+
+            .userInfo_none_icon {
+                line-height: 100rpx;
+            }
+        }
+    }
+}
+
+// 我的订单
+.my_order {
+    width: 90%;
+    background-color: var(--themeColor);
+    color: #000000;
+    margin: 20px auto;
+    border-radius: 10px;
+    position: relative;
+
+    .my_order_header {
+        padding: 15px;
+        font-size: 18px;
+        border-bottom: 1px solid #000000;
+    }
+
+    .my_order_list {
+        display: flex;
+        justify-content: space-around;
+
+        .my_order_item {
+            text-align: center;
+            padding: 15px;
+
+            .my_order_item_icon {
+                font-size: 25px;
+                display: block;
+                color: #000000;
+            }
+
+            .my_order_item_title {
+                display: block;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.my_about_list {
+    width: 90%;
+    margin: 20px auto;
+
+    .my_about_list_item {
+        height: 50px;
+        line-height: 50px;
+        padding: 0 15px;
+        font-size: 18px;
+        border-radius: 10px;
+        background-color: var(--themeColor);
+        color: #000000;
+        margin-bottom: 5px;
+
+        button {
+            width: 100%;
+            text-align: left;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            line-height: 50px;
+            background-color: none;
+        }
+    }
+}

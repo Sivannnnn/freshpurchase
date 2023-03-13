@@ -1,0 +1,274 @@
+page {
+    background: linear-gradient(to bottom, var(--themeColor), #fff);
+}
+.body{
+  overflow-y: scroll;
+  .address,.delivery_time,.goods,.paystyle,.remarks,.about_setting{
+    width: 90%;
+    margin: 20rpx auto;
+    background-color: #fff;
+    border-radius: 10rpx;
+    padding: 0 20rpx;
+  }
+  .address {
+      height: 180rpx;
+      position: relative;
+      .address_icon {
+          line-height: 150rpx;
+          color: var(--themeColor);
+          font-size: 72rpx;
+          margin-right: 30rpx;
+      }
+      
+      .address_txt {
+          line-height: 150rpx;
+          font-size: 48rpx;
+      }
+      
+      .address_detail{
+        position: absolute;
+        left: 20%;
+        top: 0;
+        height: 100%;
+        width: 500rpx;
+        .address_detail_tit{
+          font-size: 42rpx;
+        }
+        .address_detail_info{
+          color: #DCDCDC;
+        }
+      }
+
+      .address_right {
+          line-height: 150rpx;
+          float: right;
+          font-size: 30rpx;
+      }
+  }
+  // 送达时间
+  .delivery_time {
+      height: 100rpx;
+      line-height: 100rpx;
+      .delivery_time_tit {
+          font-weight: bold;
+      }
+  
+      .delivery_time_txt {
+          color: var(--themeColor);
+          float: right;
+      }
+  }
+  
+  // 商品信息
+  .goods {
+      height: 600rpx;
+      .goods_header {
+          width: 100%;
+          height: 100rpx;
+          line-height: 100rpx;
+        .goods_header_left {
+          float: left;
+          font-weight: bold;
+        }
+    
+        .goods_header_right {
+          float: right;
+        }
+      }
+    
+      .goods_imgs {
+          width: 100%;
+          height: 150rpx;
+          display: flex;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          .goods_img_items{
+              width: 150rpx;
+              height: 100%;
+              border: 2rpx solid #DCDCDC;
+              margin-right: 20rpx;
+              image{
+                  // width: 100%;
+                  height: 100%;
+              }
+          }
+      }
+    
+      .goods_total_price {
+          height: 100rpx;
+          line-height: 100rpx;
+        .goods_total_price_tit {
+          float: left;
+        }
+    
+        .goods_total_price_num {
+          float: right;
+          font-weight: bold;
+        }
+      }
+    
+      .goods_fare {
+          height: 100rpx;
+          line-height: 100rpx;
+        .goods_fare_tit {
+          float: left;
+    
+        }
+    
+        .goods_fare_num {
+          float: right;
+          font-weight: bold;
+    
+        }
+      }
+    
+      .goods_footer {
+          border-top: 2rpx solid #DCDCDC;
+          height: 150rpx;
+        .goods_footer_txt {
+          float: right;
+          line-height: 180rpx;
+        }
+    
+        .goods_footer_num {
+          float: right;
+          line-height: 160rpx;
+          font-weight: bold;
+          font-size: 60rpx;
+        }
+      }
+    }
+  // 支付方式
+  .paystyle { 
+    height: 222rpx;
+    .paystyle_header {
+      height: 80rpx;
+      line-height: 80rpx;
+      border-bottom: 2rpx solid #DCDCDC;
+      text {
+        font-size: 36rpx;
+        font-weight: bold;
+      }
+    }
+  
+    .paystyle_content {
+      height: 140rpx;
+      line-height: 140rpx;
+      .paystyle_content_icon {
+        line-height: 110rpx;
+        float: left;
+        color: 	#00FF00;
+        font-size: 80rpx;
+        padding: 10rpx;
+      }
+  
+      .paystyle_content_tit {
+        float: left;
+        color: #DCDCDC;
+      }
+  
+      .paystyle_content_checkbox {
+        float: right;
+      }
+    }
+  }
+  // 备注
+  .remarks {
+    height: 220rpx;
+    .remarks_header {
+      height: 100rpx;
+      line-height: 100rpx;
+      .remarks_header_tit {
+        float: left;
+        font-size: 36rpx;
+        font-weight: bold;
+      }
+  
+      .remarks_header_counts {
+        float: right;
+        color: #DCDCDC;
+      }
+    }
+  
+    .view.remarks_content {
+      height: 120rpx;
+      width: 100%;
+      input {
+        padding: 10rpx 20rpx  ;
+        height: 100rpx;
+        width: 100%;
+        border: 2rpx solid #DCDCDC;
+      }
+    }
+  }
+  // 相关配置
+  .about_setting {
+    height: 300rpx;
+    .about_setting_info {
+      height: 150rpx;
+      padding: 15rpx 0;
+      display: flex;
+      .about_setting_info_left {
+        flex: 9;
+        .about_setting_info_left_tit {
+          font-size: 36rpx;
+          font-weight: bold;
+        }
+  
+        .about_setting_info_left_icon.cuIcon-question {
+          color: #dcdcdc;
+          font-size: 36rpx;
+        }
+  
+        .about_setting_info_left_description {
+          display: block;
+        }
+      }
+  
+      view.about_setting_info_right {
+        flex: 1;
+        line-height: 100rpx;
+        checkbox {
+  
+        }
+      }
+    }
+    .about_setting_info:not(:last-child){
+      border-bottom: 2rpx solid #DCDCDC;
+    }
+  }
+}
+// 底部操作栏
+.bottom {
+    width: 100%;
+    height: 170rpx;
+    line-height: 170rpx;
+    padding: 0 20rpx;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+
+    text {
+        font-size: 40rpx;
+    }
+
+    .bottom_num {
+        color: #d81e06;
+        font-weight: bold;
+        font-size: 48rpx;
+    }
+
+    button {
+        position: absolute;
+        right: 5%;
+        top: 15%;
+        color: #fff;
+        border-radius: 50rpx;
+        font-size: 40rpx;
+        font-weight: 500;
+        width: 250rpx;
+        padding: 20rpx 5rpx;
+        background-color: var(--themeColor);
+        float: right;
+    }
+}

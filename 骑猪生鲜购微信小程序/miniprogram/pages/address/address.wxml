@@ -1,0 +1,35 @@
+<view class="address" style="height:calc(100vh - 160rpx)">
+	<view class="address_info" wx:if="{{!address_list.length==0}}">
+		<view
+		 class="address_info_item"
+		 wx:for="{{address_list}}"
+		 wx:key="index"
+		>
+			<view
+			 class="address_info_item_content"
+			 bindtap="handleChoiceAddress"
+			 data-index="{{index}}"
+			>
+				<text class="address_info_item_content_appro_address">{{item.appro_address}}</text>
+				<text class="address_info_item_content_detail_address">{{item.detail_address}}</text>
+				<text class="address_info_item_content_other">{{item.receiver}} {{item.tel_number}}</text>
+			</view>
+			<text class="address_info_item_right cuIcon-post" bindtap="hanleModifyAddress" data-item="{{item}}" data-index="{{index}}"></text>
+		</view>
+	</view>
+	<view class="address_none" wx:else>
+		<image class="" src="https://fresh-supermarket.oss-cn-shenzhen.aliyuncs.com/address/%E6%9A%82%E6%97%A0%E6%94%B6%E8%B4%A7%E5%9C%B0%E5%9D%80.png" />
+		<text>没有收货地址，快去添加~</text>
+	</view>
+</view>
+<view class="add_address">
+	<navigator
+	 class="add_address_btn"
+	 url="/pages/add_address/add_address"
+	 hover-class="none"
+	>添加地址
+	</navigator>
+</view>
+<modal id="modal"></modal>
+<loadingModal id="loadingModal"></loadingModal>
+

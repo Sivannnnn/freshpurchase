@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "aboutModal": "../../components/aboutModal/aboutModal",
+        "modal": "/components/modal/modal",
+        "loadingModal":"../../components/loadingModal/loadingModal"
+    },
+    "navigationBarTitleText": "订单确认"
+}

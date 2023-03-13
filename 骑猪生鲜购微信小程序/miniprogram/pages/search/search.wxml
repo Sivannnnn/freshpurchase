@@ -1,0 +1,51 @@
+<!-- 搜索框 -->
+<view class="search">
+	<view class="search_row">
+		<text class="search_row_srh iconfont icon-wxbsousuotuiguang"></text>
+		<input
+		 v-model="inpValue"
+		 placeholder="{{hotWord}}"
+		 bindtap="handleCancel"
+		 bindinput="inputFocus"
+		></input>
+		<text class="search_row_clear cuIcon-close text-gray" bindtap="handleClear" hidden="{{!isFocus}}"></text>
+		<view class="search_row_btn" bindtap="handleSearch">搜索</view>
+	</view>
+	<navigator
+	 class="search_toCart"
+	 url="/pages/cart/cart"
+	 open-type="switchTab"
+	 hover-class="none"
+	>
+		<text class="cuIcon-cartfill text-white"></text>
+	</navigator>
+</view>
+<!-- 搜索结果 -->
+<view class="search_content" style="height:calc(100vh - 100rpx)">
+	<view wx:if="{{searchData.length > 0}}">
+		<navigator
+		 wx:for="{{searchData}}"
+		 wx:key="id"
+		 hover-class="none"
+		 url="/pages/goods_detail/goods_detail?value={{item.id}}"
+		 class="search_item"
+		 hover-class="none"
+		>
+			<text class="search_item_srh iconfont icon-wxbsousuotuiguang"></text>
+			<text class="search_item_txt">{{item.title}}</text>
+		</navigator>
+	</view>
+	<view class="clearfix" wx:else>
+		<view class="search_content_history_tit">历史搜索:</view>
+		<view class="search_content_history_con">
+			<navigator
+			 url="/pages/goods_list/goods_list?value={{item}}"
+			 wx:for="{{historySearch}}"
+			 wx:key="index"
+			>
+				{{item}}
+			</navigator>
+		</view>
+	</view>
+</view>
+

@@ -1,0 +1,60 @@
+<loadingModal id="loadingModal"></loadingModal>
+<modal id="modal"></modal>
+<view class="group">
+	<view class="group_top clearfix">
+		<view class="title">收货小区</view>
+		<text class="cuIcon-locationfill text-themeColor" bindtap="openMap"></text>
+		<input
+		 placeholder="小区名称/写字楼等"
+		 value="{{appro_address}}"
+		 bindinput="handleInputChange"
+		 data-type="appro_address"
+		></input>
+	</view>
+	<input
+	 class="grop_bottom"
+	 placeholder="楼号/门牌号"
+	 value="{{detail_address}}"
+	 bindinput="handleInputChange"
+	 data-type="detail_address"
+	></input>
+</view>
+<view class="group">
+	<view class="group_top">
+		<view class="title">收货人</view>
+		<input
+		 placeholder="收件人姓名"
+		 value="{{receiver}}"
+		 bindinput="handleInputChange"
+		 data-type="receiver"
+		></input>
+	</view>
+	<view class="grop_bottom">
+		<switch
+		 class="switch-sex"
+		 checked="{{sex}}"
+		 bindchange="handleSwitchtChange"
+		>
+		</switch>
+	</view>
+</view>
+<view class="group">
+	<view class="group_top">
+		<view class="title">手机号码</view>
+		<input
+		 type="number"
+		 placeholder="收件人手机号码"
+		 value="{{tel_number}}"
+		 bindinput="handleInputChange"
+		 data-type="tel_number"
+		></input>
+	</view>
+</view>
+<view class="btn" bindtap="handleSave">保存收货地址</view>
+<view
+ class="del"
+ bindtap="handleDel"
+ wx:if="{{modifyIndex}}"
+>删除地址
+</view>
+

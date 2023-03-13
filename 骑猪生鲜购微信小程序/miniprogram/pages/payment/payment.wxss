@@ -1,0 +1,243 @@
+page {
+  background: linear-gradient(to bottom, var(--themeColor), #fff);
+}
+.body {
+  overflow-y: scroll;
+}
+.body .address,
+.body .delivery_time,
+.body .goods,
+.body .paystyle,
+.body .remarks,
+.body .about_setting {
+  width: 90%;
+  margin: 20rpx auto;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+}
+.body .address {
+  height: 180rpx;
+  position: relative;
+}
+.body .address .address_icon {
+  line-height: 150rpx;
+  color: var(--themeColor);
+  font-size: 72rpx;
+  margin-right: 30rpx;
+}
+.body .address .address_txt {
+  line-height: 150rpx;
+  font-size: 48rpx;
+}
+.body .address .address_detail {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  height: 100%;
+  width: 500rpx;
+}
+.body .address .address_detail .address_detail_tit {
+  font-size: 42rpx;
+}
+.body .address .address_detail .address_detail_info {
+  color: #DCDCDC;
+}
+.body .address .address_right {
+  line-height: 150rpx;
+  float: right;
+  font-size: 30rpx;
+}
+.body .delivery_time {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.body .delivery_time .delivery_time_tit {
+  font-weight: bold;
+}
+.body .delivery_time .delivery_time_txt {
+  color: var(--themeColor);
+  float: right;
+}
+.body .goods {
+  height: 600rpx;
+}
+.body .goods .goods_header {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.body .goods .goods_header .goods_header_left {
+  float: left;
+  font-weight: bold;
+}
+.body .goods .goods_header .goods_header_right {
+  float: right;
+}
+.body .goods .goods_imgs {
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.body .goods .goods_imgs .goods_img_items {
+  width: 150rpx;
+  height: 100%;
+  border: 2rpx solid #DCDCDC;
+  margin-right: 20rpx;
+}
+.body .goods .goods_imgs .goods_img_items image {
+  height: 100%;
+}
+.body .goods .goods_total_price {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.body .goods .goods_total_price .goods_total_price_tit {
+  float: left;
+}
+.body .goods .goods_total_price .goods_total_price_num {
+  float: right;
+  font-weight: bold;
+}
+.body .goods .goods_fare {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.body .goods .goods_fare .goods_fare_tit {
+  float: left;
+}
+.body .goods .goods_fare .goods_fare_num {
+  float: right;
+  font-weight: bold;
+}
+.body .goods .goods_footer {
+  border-top: 2rpx solid #DCDCDC;
+  height: 150rpx;
+}
+.body .goods .goods_footer .goods_footer_txt {
+  float: right;
+  line-height: 180rpx;
+}
+.body .goods .goods_footer .goods_footer_num {
+  float: right;
+  line-height: 160rpx;
+  font-weight: bold;
+  font-size: 60rpx;
+}
+.body .paystyle {
+  height: 222rpx;
+}
+.body .paystyle .paystyle_header {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #DCDCDC;
+}
+.body .paystyle .paystyle_header text {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.body .paystyle .paystyle_content {
+  height: 140rpx;
+  line-height: 140rpx;
+}
+.body .paystyle .paystyle_content .paystyle_content_icon {
+  line-height: 110rpx;
+  float: left;
+  color: #00FF00;
+  font-size: 80rpx;
+  padding: 10rpx;
+}
+.body .paystyle .paystyle_content .paystyle_content_tit {
+  float: left;
+  color: #DCDCDC;
+}
+.body .paystyle .paystyle_content .paystyle_content_checkbox {
+  float: right;
+}
+.body .remarks {
+  height: 220rpx;
+}
+.body .remarks .remarks_header {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.body .remarks .remarks_header .remarks_header_tit {
+  float: left;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.body .remarks .remarks_header .remarks_header_counts {
+  float: right;
+  color: #DCDCDC;
+}
+.body .remarks .view.remarks_content {
+  height: 120rpx;
+  width: 100%;
+}
+.body .remarks .view.remarks_content input {
+  padding: 10rpx 20rpx  ;
+  height: 100rpx;
+  width: 100%;
+  border: 2rpx solid #DCDCDC;
+}
+.body .about_setting {
+  height: 300rpx;
+}
+.body .about_setting .about_setting_info {
+  height: 150rpx;
+  padding: 15rpx 0;
+  display: flex;
+}
+.body .about_setting .about_setting_info .about_setting_info_left {
+  flex: 9;
+}
+.body .about_setting .about_setting_info .about_setting_info_left .about_setting_info_left_tit {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.body .about_setting .about_setting_info .about_setting_info_left .about_setting_info_left_icon.cuIcon-question {
+  color: #dcdcdc;
+  font-size: 36rpx;
+}
+.body .about_setting .about_setting_info .about_setting_info_left .about_setting_info_left_description {
+  display: block;
+}
+.body .about_setting .about_setting_info view.about_setting_info_right {
+  flex: 1;
+  line-height: 100rpx;
+}
+.body .about_setting .about_setting_info:not(:last-child) {
+  border-bottom: 2rpx solid #DCDCDC;
+}
+.bottom {
+  width: 100%;
+  height: 170rpx;
+  line-height: 170rpx;
+  padding: 0 20rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+}
+.bottom text {
+  font-size: 40rpx;
+}
+.bottom .bottom_num {
+  color: #d81e06;
+  font-weight: bold;
+  font-size: 48rpx;
+}
+.bottom button {
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  color: #fff;
+  border-radius: 50rpx;
+  font-size: 40rpx;
+  font-weight: 500;
+  width: 250rpx;
+  padding: 20rpx 5rpx;
+  background-color: var(--themeColor);
+  float: right;
+}

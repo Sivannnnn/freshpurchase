@@ -1,0 +1,29 @@
+.login {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login .logo {
+  width: 300rpx;
+  height: 300rpx;
+}
+.login .btn {
+  border-radius: 50rpx;
+  margin: 30rpx 0;
+  font-weight: normal;
+  font-size: 38rpx;
+  color: #fff;
+  background: var(--themeColor);
+}
+.login .userProtocol {
+  width: 80%;
+  display: inline;
+}
+.login .userProtocol .userProtocol_txt {
+  display: inline;
+}
+.login .userProtocol .userProtocol_txt .userProtocol_txt_highline {
+  color: var(--themeColor);
+}

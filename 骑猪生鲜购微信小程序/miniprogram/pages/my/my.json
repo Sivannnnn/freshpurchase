@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "modal": "/components/modal/modal"
+    },
+    "navigationBarTitleText": "个人中心"
+}

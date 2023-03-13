@@ -1,0 +1,94 @@
+.VerticalBox {
+    display: flex;
+
+    scroll-view.VerticalNav.nav {
+        width: 250rpx;
+        white-space: initial;
+
+        .cu-item {
+            width: 100%;
+            text-align: center;
+            background-color: #fff;
+            margin: 0;
+            border: none;
+            height: 50px;
+            line-height: 50px;
+            position: relative;
+            margin: 20rpx 0;
+        }
+    }
+
+    .VerticalMain {
+        background-color: #f1f1f1;
+        .cu-bar.solid-bottom {
+            .action {
+                margin-left: 30rpx;
+            }
+          }
+        .item {
+            padding: 10rpx;
+            height: 215rpx;
+            position: relative;
+            navigator{
+                display: flex;
+                height: 100%;
+                width: 100%;
+                .item_img {
+                    flex: 3;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50rpx;
+                }
+    
+                .item_content {
+                    margin-left: 10rpx;
+                    flex: 4;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .item_content_top {
+                        .item_tit {
+                            font-size: 28rpx;
+                        }
+                    }
+        
+                    .item_content_bottom {
+                        position: relative;
+                        .item_oldPrice {
+                            color: #DCDCDC;
+                            text-decoration: line-through;
+                        }
+        
+                        .item_newPrice {
+                            font-size: 36rpx;
+                            color: #d81e06;
+                        }
+                        .item_sales{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }       
+        .item_add{
+            color: #fff;
+            font-size: 36rpx;
+            background-color: var(--themeColor);
+            border-radius: 50%;
+            padding: 5rpx;
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+        }
+        .searchNxt {
+            text-align: center;
+            color: #ccc;
+            font-size: 36rpx;
+            margin: 15rpx 0;
+
+            .searchNxt_txt {
+                margin: 0 20rpx;
+            }
+        }
+    }
+}

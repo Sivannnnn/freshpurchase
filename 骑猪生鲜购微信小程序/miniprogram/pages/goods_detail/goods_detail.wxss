@@ -1,0 +1,124 @@
+page {
+  background-color: #F5F5F5;
+}
+.detail_swiper swiper {
+  height: 50vw;
+  text-align: center;
+}
+.detail_swiper swiper image {
+  width: 60%;
+  height: 100%;
+}
+.cu-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 0;
+  background-color: #fff;
+}
+.cu-bar .btn-group button {
+  width: 200rpx;
+  padding: 0 10rpx;
+}
+.body {
+  overflow-y: scroll;
+}
+.body .content,
+.body .remark {
+  width: 90%;
+  margin: 20rpx auto;
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+.body .content .content_newPrice {
+  font-size: 36rpx;
+  color: #d81e06;
+}
+.body .content .content_oldPrice {
+  font-size: 36rpx;
+  color: #DCDCDC;
+  text-decoration: line-through;
+}
+.body .content .content_title {
+  display: block;
+  margin: 10rpx 0;
+  font-size: 45rpx;
+}
+.body .content .content_desc {
+  color: #DCDCDC;
+}
+.body .remark .remark_top {
+  height: 50rpx;
+}
+.body .remark .remark_top .remark_top_title {
+  font-weight: bold;
+  font-size: 36rpx;
+}
+.body .remark .remark_top .remark_top_allRemarks {
+  float: right;
+  line-height: 50rpx;
+  color: #DCDCDC;
+}
+.body .remark .remark_center {
+  margin: 20rpx 0;
+  height: 150rpx;
+}
+.body .remark .remark_center .remark_center_score {
+  float: left;
+  height: 100%;
+  color: var(--themeColor);
+  border-right: 2rpx solid#F5F5F5 ;
+  font-weight: bold;
+  text-align: center;
+  padding-right: 20rpx;
+}
+.body .remark .remark_center .remark_center_score .remark_center_score_num {
+  font-size: 72rpx;
+  display: block;
+}
+.body .remark .remark_center .remark_center_label {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.body .remark .remark_center .remark_center_label .remark_center_label_item {
+  text-align: center;
+  padding: 5rpx;
+  border-radius: 15rpx;
+  background-color: #f5f5f5;
+  margin: 10rpx;
+}
+.body .remark .remark_footer {
+  padding: 15rpx;
+  background-color: #f5f5f5;
+  border-radius: 10rpx;
+  border-radius: 15rpx;
+}
+.body .remark .remark_footer .remark_footer_userInfo {
+  height: 100rpx;
+  width: 100%;
+}
+.body .remark .remark_footer .remark_footer_userInfo .remark_footer_userInfo_img {
+  float: left;
+  width: 100rpx;
+  height: 100%;
+  margin-right: 20rpx;
+}
+.body .remark .remark_footer .remark_footer_userInfo .remark_footer_userInfo_content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.body .remark .remark_footer .remark_footer_userInfo .remark_footer_userInfo_content .remark_footer_userInfo_username {
+  font-weight: bold;
+  font-size: 38rpx;
+}
+.body .remark .remark_footer .remark_footer_userInfo .remark_footer_userInfo_content .remark_footer_userInfo_remakrDate {
+  color: #CCC;
+}
+.body .remark .remark_footer .remark_footer_remarkInfo {
+  margin-top: 20rpx;
+}

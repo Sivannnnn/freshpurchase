@@ -1,0 +1,17 @@
+server:
+#  前端已经占用8080端口了
+  port: 8081
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/freshpurchase?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+mybatis-plus:
+    mapper-locations: classpath*/mapper/**Mapper.xml
+sivan:
+  jwt:
+    header: Authorization
+    expire: 604800 #7天，秒单位
+    secret: df5d5fdqwdf4jk1wer278w7er8tsx2c1

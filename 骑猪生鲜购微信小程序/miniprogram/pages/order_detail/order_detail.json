@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "modal": "/components/modal/modal"
+    },
+    "navigationBarTitleText": "订单详情"
+}

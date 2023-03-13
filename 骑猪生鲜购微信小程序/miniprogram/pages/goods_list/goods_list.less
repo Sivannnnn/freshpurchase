@@ -1,0 +1,106 @@
+// 导航栏
+.cu-item {
+    font-size: 38rpx;
+    position: relative;
+
+    .tit {}
+
+    .price_icn {
+        position: absolute;
+        height: 100%;
+        top: -35%;
+        right: 20%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        text {
+            font-size: 26rpx;
+            height: 26rpx;
+            display: inline;
+        }
+    }
+}
+
+.list {
+    background-color: #F5F5F5;
+    position: relative;
+    .toTop{
+        display: inline-block;
+        z-index: 1;
+        opacity: 0.8;
+        position: fixed;
+        right: 5rpx;
+        bottom: 150rpx;
+        border: 2rpx solid var(--themeColor);
+        border-radius: 50%;
+        text{
+            padding: 5rpx;
+            font-size: 64rpx;
+            color: var(--themeColor);
+        }
+    }
+    .item {
+        padding: 20rpx;
+        height: 250rpx;
+        width: 90%;
+        background-color: #FFF;
+        margin: 20rpx auto;
+        border-radius: 40rpx;
+        position: relative;
+
+        navigator {
+            display: flex;
+            height: 100%;
+            .item_img {
+                flex: 2;
+                height: 100%;
+                width: 100%;
+                border-radius: 50rpx;
+            }
+
+            .item_content {
+                margin-left: 10rpx;
+                flex: 4;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .item_content_top {
+                    .item_tit {
+                        font-size: 30rpx;
+                    }
+                }
+
+                .item_content_bottom {
+                    position: relative;
+
+                    .item_oldPrice {
+                        color: #DCDCDC;
+                        text-decoration: line-through;
+                    }
+
+                    .item_newPrice {
+                        font-size: 40rpx;
+                        color: #d81e06;
+                    }
+
+                    .item_sales {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .item_add {
+            color: #fff;
+            font-size: 36rpx;
+            background-color: var(--themeColor);
+            border-radius: 50%;
+            padding: 5rpx;
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+        }
+    }
+}

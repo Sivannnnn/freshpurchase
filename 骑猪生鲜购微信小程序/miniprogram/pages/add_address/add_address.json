@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "modal": "../../components/modal/modal",
+        "loadingModal":"../../components/loadingModal/loadingModal"
+    },
+    "navigationBarTitleText": "添加收货地址"
+}

@@ -1,0 +1,11 @@
+<view class="search">
+	<navigator
+	 class="search_body_content"
+	 open-type="navigate"
+	 url="/pages/search/search"
+	>
+		<text class="search_body_content_icn iconfont icon-wxbsousuotuiguang"></text>
+		<text class="search_body_content_txt">{{hotWords}}</text>
+	</navigator>
+</view>
+

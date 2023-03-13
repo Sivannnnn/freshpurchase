@@ -1,0 +1,154 @@
+page {
+  background: linear-gradient(to bottom, var(--themeColor), #fff);
+}
+.header {
+  padding: 20rpx;
+  color: #fff;
+  text-align: center;
+  height: 125rpx;
+}
+.header .title {
+  margin-top: 25rpx;
+  display: inline-block;
+  font-size: 54rpx;
+}
+.header .title .cuIcon-roundcheckfill {
+  margin-right: 10rpx;
+}
+.header .cuIcon-servicefill.fr {
+  color: #fff;
+  padding: 0;
+  width: 50rpx;
+  font-size: 44rpx;
+}
+.body {
+  overflow-y: scroll;
+}
+.body .goods,
+.body .delivery {
+  width: 90%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+.body .goods .goods_info {
+  border-bottom: 2rpx solid #DCDCDC;
+  height: 300rpx;
+}
+.body .goods .goods_info .goods_info_item {
+  padding: 10rpx;
+  height: 120rpx;
+  display: flex;
+}
+.body .goods .goods_info .goods_info_item .goods_info_item_img {
+  flex: 1;
+  height: 100%;
+  margin-right: 10rpx;
+  border-radius: 50%;
+}
+.body .goods .goods_info .goods_info_item .goods_info_item_content {
+  flex: 5;
+}
+.body .goods .goods_info .goods_info_item .goods_info_item_content .goods_info_item_content_title {
+  font-weight: bold;
+  display: block;
+}
+.body .goods .goods_info .goods_info_item .goods_info_item_content .goods_info_item_content_quantity {
+  flex: 1;
+  color: #DCDCDC;
+}
+.body .goods .goods_info .goods_info_item .goods_info_item_price .goods_info_item_price_new {
+  font-size: 36rpx;
+  display: block;
+  font-weight: bold;
+}
+.body .goods .goods_info .goods_info_item .goods_info_item_price .goods_info_item_price_old {
+  font-size: 32rpx;
+  color: #DCDCDC;
+  text-decoration: line-through;
+}
+.body .goods .goods_total_price,
+.body .goods .goods_fare,
+.body .goods .goods_pay_price {
+  padding: 20rpx 0;
+}
+.body .goods .goods_total_price_title,
+.body .goods .goods_fare_title {
+  font-size: 32rpx;
+}
+.body .goods .goods_total_price_new,
+.body .goods .goods_fare_num,
+.body .goods .goods_pay_price_num {
+  font-weight: bold;
+}
+.body .goods .goods_total_price .goods_total_price_old {
+  font-size: 32rpx;
+  color: #DCDCDC;
+  text-decoration: line-through;
+}
+.body .goods .goods_fare {
+  border-bottom: 2rpx solid #DCDCDC;
+}
+.body .goods .goods_pay_price {
+  font-size: 38rpx;
+}
+.body .delivery .delivery_header {
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #DCDCDC;
+}
+.body .delivery .delivery_header text {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.body .delivery .delivery_body {
+  font-size: 32rpx;
+}
+.body .delivery .delivery_body .delivery_body_address,
+.body .delivery .delivery_body .delivery_body_time,
+.body .delivery .delivery_body .delivery_body_lack,
+.body .delivery .delivery_body .delivery_body_remarks {
+  margin: 15rpx;
+  display: flex;
+}
+.body .delivery .delivery_body .delivery_body_address_title,
+.body .delivery .delivery_body .delivery_body_time_title,
+.body .delivery .delivery_body .delivery_body_lack_title,
+.body .delivery .delivery_body .delivery_body_remarks_title {
+  flex: 3;
+  color: #DCDCDC;
+  font-size: 32rpx;
+  margin-right: 15rpx;
+}
+.body .delivery .delivery_body .delivery_body_address_content,
+.body .delivery .delivery_body .delivery_body_time_content,
+.body .delivery .delivery_body .delivery_body_lack_content,
+.body .delivery .delivery_body .delivery_body_remarks_content {
+  flex: 8;
+}
+.body .delivery .delivery_body .delivery_body_address .delivery_body_address_content .delivery_body_address_content_txt {
+  display: block;
+}
+.bottom {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 170rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.bottom .btn {
+  margin: 0 35rpx;
+  height: 65rpx;
+  font-size: 32rpx;
+  padding: 10rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid #DCDCDC;
+}
+.bottom .repay {
+  color: var(--themeColor);
+  border: 2rpx solid var(--themeColor);
+}

@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/search/search",
+    "pages/login/login",
+    "pages/order/order",
+    "pages/goods_detail/goods_detail",
+    "pages/goods_list/goods_list",
+    "pages/payment/payment",
+    "components/modal/modal",
+    "pages/address/address",
+    "pages/add_address/add_address",
+    "pages/order_detail/order_detail",
+    "pages/feedback/feedback"
+  ],
+  "window": {
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00BFFF",
+    "navigationBarTitleText": "骑猪生鲜购",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#FFFFFF",
+    "selectedColor": "#000000",
+    "backgroundColor": "#00BFFF",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home-o.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "icons/classify.png",
+        "selectedIconPath": "icons/classify-o.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "icons/cart.png",
+        "selectedIconPath": "icons/cart-o.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "icons/my.png",
+        "selectedIconPath": "icons/my-o.png"
+      }
+    ]
+  },
+  "requiredPrivateInfos": [
+    "chooseLocation"
+  ],
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

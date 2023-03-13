@@ -1,0 +1,91 @@
+<view class="header clearfix">
+	<view class="title">
+		<text class="cuIcon-roundcheckfill"></text>
+		<text>商家正在备货</text>
+	</view>
+	<button
+	 class="cuIcon-servicefill fr"
+	 open-type="contact"
+	 hover-class="none"
+	></button>
+</view>
+<view class="body" style="height:calc(100vh - 295rpx)">
+	<!-- 商品信息 -->
+	<view class="goods">
+		<scroll-view scroll-y class="goods_info">
+			<view
+			 class="goods_info_item"
+			 wx:for="{{payOrder}}"
+			 wx:key="index"
+			>
+				<image
+				 class="goods_info_item_img"
+				 src="{{item.src}}"
+				 lazy-load
+				/>
+				<view class="goods_info_item_content">
+					<text class="goods_info_item_content_title text-overflow">{{item.title}}</text>
+					<text class="goods_info_item_content_quantity">数量:{{item.num}}</text>
+				</view>
+				<text class="goods_info_item_price">
+                    <text class="goods_info_item_price_new">￥{{item.newPrice}}</text>
+				<text class="goods_info_item_price_old">￥{{item.oldPrice}}</text>
+				</text>
+			</view>
+		</scroll-view>
+		<view class="goods_total_price clearfix">
+			<text class="goods_total_price_title fl">商品总额</text>
+			<text class="goods_total_price_new fr">￥{{totalNewPrice}}</text>
+			<text class="goods_total_price_old fr">￥{{totalOldPrice}}</text>
+		</view>
+		<view class="goods_fare clearfix">
+			<text class="goods_fare_title fl">配送费</text>
+			<text class="goods_fare_num fr">￥0</text>
+		</view>
+		<view class="goods_pay_price clearfix">
+			<text class="goods_pay_price_num fr">￥{{totalNewPrice}}</text>
+			<text class="goods_pay_price_title fr">实付总额</text>
+		</view>
+	</view>
+	<!-- 配送信息 -->
+	<view class="delivery">
+		<view class="delivery_header">
+			<text>配送信息</text>
+		</view>
+		<view class="delivery_body">
+			<view class="delivery_body_address">
+				<text class="delivery_body_address_title">收货地址</text>
+				<view class="delivery_body_address_content">
+					<text class="delivery_body_address_content_txt">{{address.appro_address}}{{address.detail_address}}</text>
+					<text>{{address.receiver}}{{address.sex}} {{address.tel_number}}</text>
+				</view>
+			</view>
+			<view class="delivery_body_time">
+				<text class="delivery_body_time_title">送达时间</text>
+				<view class="delivery_body_time_content">
+					<text>{{deliveryTime}}</text>
+				</view>
+			</view>
+			<view class="delivery_body_lack">
+				<text class="delivery_body_lack_title">如遇缺货</text>
+				<view class="delivery_body_lack_content">
+					<text>缺货时电话与我沟通</text>
+				</view>
+			</view>
+			<view class="delivery_body_remarks">
+				<text class="delivery_body_remarks_title">备注信息</text>
+				<view class="delivery_body_remarks_content">
+					<text>{{remarks}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<!-- 底部操作栏 -->
+<view class="bottom">
+	<view class="btn repay" bindtap="repay">再次购买</view>
+	<view class="btn" bindtap="unopen">申请退款</view>
+	<view class="btn" bindtap="unopen">开发票</view>
+</view>
+<modal id="modal"></modal>
+
